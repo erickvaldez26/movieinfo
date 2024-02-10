@@ -26,6 +26,8 @@
 		32152F212B78062800346591 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32152F202B78062800346591 /* LoginPresenter.swift */; };
 		32152F232B78063400346591 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32152F222B78063400346591 /* LoginInteractor.swift */; };
 		32C795B32B780CDE00237FD3 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C795B22B780CDE00237FD3 /* LoginStoryboard.storyboard */; };
+		32C795B62B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32C795B42B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodeld */; };
+		32C795B92B7832D600237FD3 /* LoginDataSourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C795B82B7832D600237FD3 /* LoginDataSourcesManager.swift */; };
 		4D541FCEE698D5909D54FD06 /* Pods_MovieInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7066FEB85122925B40E0E2 /* Pods_MovieInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		32152F202B78062800346591 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		32152F222B78063400346591 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		32C795B22B780CDE00237FD3 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		32C795B52B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieInfoLocalData.xcdatamodel; sourceTree = "<group>"; };
+		32C795B82B7832D600237FD3 /* LoginDataSourcesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataSourcesManager.swift; sourceTree = "<group>"; };
 		3A8DAA48E31166DB6C3F60FD /* Pods-MovieInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.debug.xcconfig"; path = "Target Support Files/Pods-MovieInfo/Pods-MovieInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		6F7066FEB85122925B40E0E2 /* Pods_MovieInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB38869EFB44508D2F80B32 /* Pods-MovieInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.release.xcconfig"; path = "Target Support Files/Pods-MovieInfo/Pods-MovieInfo.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				32152EFB2B76F0CC00346591 /* HomeDataSourceManager.swift */,
+				32C795B82B7832D600237FD3 /* LoginDataSourcesManager.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				32152F092B77023B00346591 /* Movies.swift */,
+				32C795B42B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodeld */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 		32152F032B76F30600346591 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				32C795B72B78326F00237FD3 /* Local */,
 				32152F042B76F33200346591 /* Remote */,
 			);
 			path = Wireframe;
@@ -223,6 +230,13 @@
 				32152F1C2B77F93A00346591 /* LoginProtocols.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		32C795B72B78326F00237FD3 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 		3BC36F3A158256AD9380A2BE /* Frameworks */ = {
@@ -366,6 +380,7 @@
 				32152F182B774F4600346591 /* CustomTextField.swift in Sources */,
 				32152EFC2B76F0CC00346591 /* HomeDataSourceManager.swift in Sources */,
 				32152F062B76F35900346591 /* ServiceInterceptor.swift in Sources */,
+				32C795B62B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodeld in Sources */,
 				32152F232B78063400346591 /* LoginInteractor.swift in Sources */,
 				32152F1A2B77E01E00346591 /* CustomButton.swift in Sources */,
 				32152F0A2B77023B00346591 /* Movies.swift in Sources */,
@@ -373,6 +388,7 @@
 				32152ECD2B76D19B00346591 /* AppDelegate.swift in Sources */,
 				32152F1F2B78061700346591 /* LoginRouter.swift in Sources */,
 				32152ECF2B76D19B00346591 /* SceneDelegate.swift in Sources */,
+				32C795B92B7832D600237FD3 /* LoginDataSourcesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +613,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		32C795B42B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				32C795B52B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodel */,
+			);
+			currentVersion = 32C795B52B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodel */;
+			path = MovieInfoLocalData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 32152EC12B76D19B00346591 /* Project object */;
 }
