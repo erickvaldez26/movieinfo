@@ -18,6 +18,10 @@
 		32152F062B76F35900346591 /* ServiceInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32152F052B76F35900346591 /* ServiceInterceptor.swift */; };
 		32152F082B76F3AF00346591 /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32152F072B76F3AF00346591 /* ServiceRouter.swift */; };
 		32152F0A2B77023B00346591 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32152F092B77023B00346591 /* Movies.swift */; };
+		32152F142B77460C00346591 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32152F122B77460C00346591 /* LoginViewController.swift */; };
+		32152F152B77460C00346591 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32152F132B77460C00346591 /* LoginViewController.xib */; };
+		32152F182B774F4600346591 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32152F172B774F4600346591 /* CustomTextField.swift */; };
+		32152F1A2B77E01E00346591 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32152F192B77E01E00346591 /* CustomButton.swift */; };
 		4D541FCEE698D5909D54FD06 /* Pods_MovieInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7066FEB85122925B40E0E2 /* Pods_MovieInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,10 @@
 		32152F052B76F35900346591 /* ServiceInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInterceptor.swift; sourceTree = "<group>"; };
 		32152F072B76F3AF00346591 /* ServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRouter.swift; sourceTree = "<group>"; };
 		32152F092B77023B00346591 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		32152F122B77460C00346591 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		32152F132B77460C00346591 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		32152F172B774F4600346591 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		32152F192B77E01E00346591 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		3A8DAA48E31166DB6C3F60FD /* Pods-MovieInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.debug.xcconfig"; path = "Target Support Files/Pods-MovieInfo/Pods-MovieInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		6F7066FEB85122925B40E0E2 /* Pods_MovieInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB38869EFB44508D2F80B32 /* Pods-MovieInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.release.xcconfig"; path = "Target Support Files/Pods-MovieInfo/Pods-MovieInfo.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +110,7 @@
 		32152EFF2B76F2D800346591 /* Generals */ = {
 			isa = PBXGroup;
 			children = (
+				32152F162B774F3500346591 /* Extensions */,
 			);
 			path = Generals;
 			sourceTree = "<group>";
@@ -109,6 +118,7 @@
 		32152F002B76F2DF00346591 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				32152F0B2B77455B00346591 /* Authentication */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -124,6 +134,7 @@
 		32152F022B76F2FF00346591 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				32152F132B77460C00346591 /* LoginViewController.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -143,6 +154,55 @@
 				32152F072B76F3AF00346591 /* ServiceRouter.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		32152F0B2B77455B00346591 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				32152F0F2B7745D000346591 /* View */,
+				32152F0E2B7745C900346591 /* Interactor */,
+				32152F0D2B7745AF00346591 /* Presenter */,
+				32152F0C2B7745A200346591 /* Router */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		32152F0C2B7745A200346591 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		32152F0D2B7745AF00346591 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		32152F0E2B7745C900346591 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		32152F0F2B7745D000346591 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32152F122B77460C00346591 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32152F162B774F3500346591 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32152F172B774F4600346591 /* CustomTextField.swift */,
+				32152F192B77E01E00346591 /* CustomButton.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3BC36F3A158256AD9380A2BE /* Frameworks */ = {
@@ -222,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32152F152B77460C00346591 /* LoginViewController.xib in Resources */,
 				32152ED92B76D19D00346591 /* LaunchScreen.storyboard in Resources */,
 				32152ED62B76D19D00346591 /* Assets.xcassets in Resources */,
 				32152ED42B76D19B00346591 /* Main.storyboard in Resources */,
@@ -277,11 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32152F142B77460C00346591 /* LoginViewController.swift in Sources */,
 				32152ED12B76D19B00346591 /* ViewController.swift in Sources */,
 				32152EF92B76EF9F00346591 /* TempConstants.swift in Sources */,
 				32152F082B76F3AF00346591 /* ServiceRouter.swift in Sources */,
+				32152F182B774F4600346591 /* CustomTextField.swift in Sources */,
 				32152EFC2B76F0CC00346591 /* HomeDataSourceManager.swift in Sources */,
 				32152F062B76F35900346591 /* ServiceInterceptor.swift in Sources */,
+				32152F1A2B77E01E00346591 /* CustomButton.swift in Sources */,
 				32152F0A2B77023B00346591 /* Movies.swift in Sources */,
 				32152ECD2B76D19B00346591 /* AppDelegate.swift in Sources */,
 				32152ECF2B76D19B00346591 /* SceneDelegate.swift in Sources */,
