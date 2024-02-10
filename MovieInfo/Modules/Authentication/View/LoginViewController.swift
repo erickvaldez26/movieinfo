@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var signInButton: CustomButton!
     
+    var presenter: LoginPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,5 +31,14 @@ class LoginViewController: UIViewController {
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
     }
+}
 
+extension LoginViewController: LoginViewProtocol {
+    func successFetchMovies() {
+        
+    }
+    
+    func failureFetchMovies() {
+        
+    }
 }
