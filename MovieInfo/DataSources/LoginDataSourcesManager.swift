@@ -29,22 +29,21 @@ class LoginDataSourcesManager: LoginDataSourceProtocol {
         let newUser = User(context: context)
         newUser.username = "User Test"
         newUser.email = "test@email.com"
-        newUser.password = "123456lol#"
+        newUser.password = "123456Lol#"
         
         do {
             try context.save()
             
             callbackHandler(.success("Usuario registrado correctamente"))
         } catch let error {
-            print("Error al guardar el usuario")
             callbackHandler(.failure(error as NSError))
         }
     }
     
     func validateUser(email: String, password: String, callbackHandler: @escaping UserResponse) {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "email == %$", email)
-        fetchRequest.predicate = NSPredicate(format: "password == %$", password)
+        fetchRequest.predicate = NSPredicate(format: "email == %@", email)
+        fetchRequest.predicate = NSPredicate(format: "password == %@", password)
         
         do {
             let user = try context.fetch(fetchRequest)
@@ -55,8 +54,7 @@ class LoginDataSourcesManager: LoginDataSourceProtocol {
             }
             
             callbackHandler(.success(user))
-        } catch let error {
-            print("Error al obtener el usuario")
+        } catch {
             callbackHandler(.failure(.genericError))
         }
     }

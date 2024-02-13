@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,17 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90a-HW-rlM" customClass="CustomButton" customModule="MovieInfo" customModuleProvider="target">
-                                <rect key="frame" x="90" y="607" width="213" height="44"/>
+                                <rect key="frame" x="90" y="623.66666666666663" width="213" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Y4M-0K-i8h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wMR-i0-M47"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your credentials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-ta-K2d">
-                                <rect key="frame" x="16" y="442" width="139.66666666666666" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-ta-K2d">
+                                <rect key="frame" x="16" y="422" width="63" height="21.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.98823529409999999" green="0.69019607839999997" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -48,7 +52,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Whm-b8-lqY" customClass="CustomTextField" customModule="MovieInfo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="475" width="361" height="50"/>
+                                <rect key="frame" x="16" y="491.66666666666674" width="361" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ilo-KW-V7K"/>
                                 </constraints>
@@ -56,17 +60,24 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ChI-Vx-fcV" customClass="CustomTextField" customModule="MovieInfo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="533" width="361" height="50"/>
+                                <rect key="frame" x="16" y="549.66666666666663" width="361" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ATy-lb-3Qy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AT-Hv-zm2">
+                                <rect key="frame" x="16" y="465.66666666666669" width="361" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5AT-Hv-zm2" secondAttribute="trailing" constant="16" id="2Uu-bd-8kV"/>
                             <constraint firstItem="Whm-b8-lqY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="AM7-2e-xJz"/>
                             <constraint firstItem="ChI-Vx-fcV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="BhJ-xg-AOH"/>
                             <constraint firstItem="90a-HW-rlM" firstAttribute="top" secondItem="ChI-Vx-fcV" secondAttribute="bottom" constant="24" id="GTJ-Fq-0cr"/>
@@ -75,17 +86,20 @@
                             <constraint firstItem="lSa-Jm-Cy0" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Xzf-Mk-O4k"/>
                             <constraint firstItem="jdy-ta-K2d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ZYl-fM-Xfm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="90a-HW-rlM" secondAttribute="trailing" constant="90" id="eG4-RJ-LTe"/>
+                            <constraint firstItem="Whm-b8-lqY" firstAttribute="top" secondItem="5AT-Hv-zm2" secondAttribute="bottom" constant="10" id="eN1-NS-e5d"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ChI-Vx-fcV" secondAttribute="trailing" constant="16" id="h4I-bX-sJj"/>
+                            <constraint firstItem="5AT-Hv-zm2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="iwT-pC-dej"/>
+                            <constraint firstItem="5AT-Hv-zm2" firstAttribute="top" secondItem="jdy-ta-K2d" secondAttribute="bottom" constant="22" id="m7D-q1-d3e"/>
                             <constraint firstItem="90a-HW-rlM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pOm-DA-IJd"/>
                             <constraint firstItem="90a-HW-rlM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="90" id="qrd-wQ-4pa"/>
                             <constraint firstItem="ChI-Vx-fcV" firstAttribute="top" secondItem="Whm-b8-lqY" secondAttribute="bottom" constant="8" id="qt9-Q8-gGI"/>
-                            <constraint firstItem="jdy-ta-K2d" firstAttribute="top" secondItem="lSa-Jm-Cy0" secondAttribute="bottom" constant="42" id="rSW-vX-HuF"/>
+                            <constraint firstItem="jdy-ta-K2d" firstAttribute="top" secondItem="lSa-Jm-Cy0" secondAttribute="bottom" constant="22" id="rSW-vX-HuF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Whm-b8-lqY" secondAttribute="trailing" constant="16" id="sCS-7F-CAK"/>
-                            <constraint firstItem="Whm-b8-lqY" firstAttribute="top" secondItem="jdy-ta-K2d" secondAttribute="bottom" constant="16" id="whn-Xn-FzR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Whm-b8-lqY" id="rW7-5s-859"/>
+                        <outlet property="errorLabel" destination="5AT-Hv-zm2" id="OJQ-ev-qg3"/>
                         <outlet property="passwordTextField" destination="ChI-Vx-fcV" id="rQh-F4-ZK6"/>
                         <outlet property="signInButton" destination="90a-HW-rlM" id="lUA-8K-tpY"/>
                         <outlet property="titleLabel" destination="5aL-MX-0eP" id="0JJ-Ud-pc8"/>
@@ -96,4 +110,9 @@
             <point key="canvasLocation" x="140" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -28,6 +28,8 @@
 		32C795B32B780CDE00237FD3 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C795B22B780CDE00237FD3 /* LoginStoryboard.storyboard */; };
 		32C795B62B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32C795B42B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodeld */; };
 		32C795B92B7832D600237FD3 /* LoginDataSourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C795B82B7832D600237FD3 /* LoginDataSourcesManager.swift */; };
+		32C795C12B793B5900237FD3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C795C02B793B5900237FD3 /* Helpers.swift */; };
+		32C795C82B7BF7CE00237FD3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C795C72B7BF7CE00237FD3 /* String.swift */; };
 		4D541FCEE698D5909D54FD06 /* Pods_MovieInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7066FEB85122925B40E0E2 /* Pods_MovieInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		32C795B22B780CDE00237FD3 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		32C795B52B782F4D00237FD3 /* MovieInfoLocalData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieInfoLocalData.xcdatamodel; sourceTree = "<group>"; };
 		32C795B82B7832D600237FD3 /* LoginDataSourcesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataSourcesManager.swift; sourceTree = "<group>"; };
+		32C795C02B793B5900237FD3 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		32C795C72B7BF7CE00237FD3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3A8DAA48E31166DB6C3F60FD /* Pods-MovieInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.debug.xcconfig"; path = "Target Support Files/Pods-MovieInfo/Pods-MovieInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		6F7066FEB85122925B40E0E2 /* Pods_MovieInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB38869EFB44508D2F80B32 /* Pods-MovieInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.release.xcconfig"; path = "Target Support Files/Pods-MovieInfo/Pods-MovieInfo.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,7 +160,6 @@
 		32152F032B76F30600346591 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				32C795B72B78326F00237FD3 /* Local */,
 				32152F042B76F33200346591 /* Remote */,
 			);
 			path = Wireframe;
@@ -220,6 +223,8 @@
 			children = (
 				32152F172B774F4600346591 /* CustomTextField.swift */,
 				32152F192B77E01E00346591 /* CustomButton.swift */,
+				32C795C02B793B5900237FD3 /* Helpers.swift */,
+				32C795C72B7BF7CE00237FD3 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,13 +235,6 @@
 				32152F1C2B77F93A00346591 /* LoginProtocols.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		32C795B72B78326F00237FD3 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Local;
 			sourceTree = "<group>";
 		};
 		3BC36F3A158256AD9380A2BE /* Frameworks */ = {
@@ -373,6 +371,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				32152F142B77460C00346591 /* LoginViewController.swift in Sources */,
+				32C795C12B793B5900237FD3 /* Helpers.swift in Sources */,
+				32C795C82B7BF7CE00237FD3 /* String.swift in Sources */,
 				32152ED12B76D19B00346591 /* ViewController.swift in Sources */,
 				32152F212B78062800346591 /* LoginPresenter.swift in Sources */,
 				32152EF92B76EF9F00346591 /* TempConstants.swift in Sources */,
