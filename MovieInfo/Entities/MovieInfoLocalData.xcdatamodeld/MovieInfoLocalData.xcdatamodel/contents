@@ -4,5 +4,10 @@
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="email"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
 </model>
