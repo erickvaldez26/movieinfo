@@ -14,6 +14,7 @@ protocol LoginViewProtocol {
 
 protocol LoginPresenterProtocol {
     func startCreateUser()
+    func validateIfUserLogged(navigationController: UINavigationController)
     func startValidateUser(email: String, password: String)
     func goToHome(navigationController: UINavigationController)
     func validateLoginForm(email: String, password: String) -> (isValid: Bool, errorMessage: String?)

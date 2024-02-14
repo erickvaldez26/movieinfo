@@ -24,8 +24,8 @@ class LoginRouter: LoginRouterProtocol {
     }
     
     func goToHome(navigationController: UINavigationController) {
-        print("APP: Navigate to Home")
-        //navigationController.pushViewController(HomeRouter.createModule(), animated: true)
+        navigationController.pushViewController(HomeRouter.createModule(), animated: true)
+        navigationController.setNavigationBarHidden(true, animated: false)
     }
     
     func showAlertError(errorMessage: String, fromViewController viewController: UIViewController) {

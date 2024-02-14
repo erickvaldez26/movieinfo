@@ -20,10 +20,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        presenter?.validateIfUserLogged(navigationController: navigationController!)
         configUI()
         
-        /// Se ejecuto sol una vez para crear los seeds
-        // presenter?.startCreateUser()
+        /// Se ejecuta para crear los seeds del usuario - funcionaria como un registro de usuario
+        presenter?.startCreateUser()
     }
     
     override func viewWillAppear(_ animated: Bool) {

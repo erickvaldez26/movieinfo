@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct Movies: Decodable {
-    let name: String
+struct Movies: Codable {
+    let page: Int
+    let results: [MovieDetails]
+    let total_pages: Int
+    let total_results: Int
 }
