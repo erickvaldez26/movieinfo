@@ -23,6 +23,17 @@ class LoginPresenter: LoginPresenterProtocol {
         interactor?.createUser()
     }
     
+    func validateIfUserLogged(navigationController: UINavigationController) {
+        /// Normalmente esta validacion se realiza en el splash de la app, para evitar malas experiencias de usuario o errores visuales
+        let email = UserDefaults.standard.string(forKey: "email")
+        
+        if let email = email {
+            if !email.isEmpty {
+                router?.goToHome(navigationController: navigationController)
+            }
+        }
+    }
+    
     func startValidateUser(email: String, password: String) {
         interactor?.validateUser(email: email, password: password, callback: { [self] result in
             switch result {
